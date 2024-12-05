@@ -21,8 +21,8 @@ day01Part2 :: [Int] -> [Int] -> Int
 day01Part2 listOne listTwo =
   foldl (\a x -> a + x * checkOccurrence x listTwo) 0 listOne
 
-executeDay01 :: [[String]] -> (Int, Int)
-executeDay01 content = (a, b) where 
+executeDay01 :: [[String]] -> (String, String)
+executeDay01 content = (show a, show b) where 
   listOne = getList head content
   listTwo = getList last content
   a = day01Part1 listOne listTwo
